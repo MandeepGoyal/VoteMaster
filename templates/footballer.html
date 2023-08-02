@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Footballer</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        .form-container {
+            width: 400px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .form-container button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="{{ url_for('static', filename='footballer.jpg') }}" alt="Footballer Image" style="height:300px;width:300px">
+    </div>
+    <div class="form-container">
+        <form method="POST">
+            <label>
+                <input type="radio" name="option" value="CR"> Cristiano Ronaldo
+            </label>
+            <label>
+                <input type="radio" name="option" value="LM"> Lionel Messi
+            </label>
+            <label>
+                <input type="radio" name="option" value="KM"> Kylian Mbappe
+            </label>
+            <label>
+                <input type="radio" name="option" value="EH"> Earling Haaland
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
